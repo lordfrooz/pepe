@@ -22,8 +22,12 @@ app.use(express.json());
 // o yoksa istegin kendisinden (Railway domain'i, custom domain...) alinir.
 const PUB = path.join(__dirname, 'public');
 function renderIndex(req, res) {
-  const origin = (process.env.SITE_URL || `${req.protocol}://${req.get('host')}`)
+  let origin = (process.env.SITE_URL || `${req.protocol}://${req.get('host')}`)
+    .trim()
     .replace(/\/+$/, '');
+  // SITE_URL semasiz girilirse (ornek: "robinpepe.xyz") https varsay —
+  // OG/Twitter crawler'lari mutlak URL ister, yoksa gorseli cekemezler.
+  if (!/^https?:\/\//i.test(origin)) origin = `https://${origin}`;
   const html = fs
     .readFileSync(path.join(PUB, 'index.html'), 'utf8')
     .replaceAll('__ORIGIN__', origin);
