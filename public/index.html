@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robinpepe — $RPEPE Airdrop Soon on Robinhood Chain</title>
+  <meta name="description" content="The $RPEPE airdrop is coming to Robinhood Chain. Register now, complete the missions, claim your boarding pass.">
+  <link rel="icon" href="logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>$RPEPE&nbsp;&nbsp;•&nbsp;&nbsp;AIRDROP SOON&nbsp;&nbsp;•&nbsp;&nbsp;REGISTRATION OPEN&nbsp;&nbsp;•&nbsp;&nbsp;ROBINHOOD CHAIN&nbsp;&nbsp;•&nbsp;&nbsp;ROBINPEPE&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+      <span>$RPEPE&nbsp;&nbsp;•&nbsp;&nbsp;AIRDROP SOON&nbsp;&nbsp;•&nbsp;&nbsp;REGISTRATION OPEN&nbsp;&nbsp;•&nbsp;&nbsp;ROBINHOOD CHAIN&nbsp;&nbsp;•&nbsp;&nbsp;ROBINPEPE&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <img src="logo.jpeg" alt="" class="brand-logo" onerror="this.classList.add('missing')">
+        <span class="brand-name">ROBINPEPE</span>
+      </a>
+      <a class="header-x" href="https://x.com/robinpepega" target="_blank" rel="noopener">@robinpepega</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-logo-wrap">
+          <img src="logo.jpeg" alt="Robinpepe logo" class="hero-logo" onerror="this.classList.add('missing')">
+          <span class="hero-logo-fallback" aria-hidden="true">🐸</span>
+        </div>
+        <h1 class="hero-title">ROBIN<span>PEPE</span></h1>
+        <p class="hero-sub">The people's frog is boarding on <strong>Robinhood Chain</strong>.<br>
+        The airdrop drops soon — complete the missions and lock in your seat before takeoff.</p>
+        <div class="hero-meta">
+          <span class="pill pill-live"><span class="dot"></span>AIRDROP SOON</span>
+          <span class="pill" id="stat-pill"><strong id="stat-count">—</strong>&nbsp;frogs registered</span>
+        </div>
+        <a class="btn btn-primary hero-cta" href="#claim">REGISTER FOR AIRDROP</a>
+      </div>
+    </section>
+
+    <section class="claim" id="claim">
+      <div class="claim-card">
+
+        <p class="card-eyebrow">REGISTRATION OPEN — FLIGHT RP-420</p>
+
+        <ol class="stepper" id="stepper">
+          <li class="step is-active" data-step="1"><span class="step-num">01</span><span class="step-name">X Handle</span></li>
+          <li class="step" data-step="2"><span class="step-num">02</span><span class="step-name">Missions</span></li>
+          <li class="step" data-step="3"><span class="step-num">03</span><span class="step-name">Wallet</span></li>
+        </ol>
+
+        <!-- STEP 1: X username -->
+        <div class="panel is-active" id="panel-1">
+          <h2 class="panel-title">Who's boarding?</h2>
+          <p class="panel-sub">Enter your X username so we can seat you.</p>
+          <div class="field">
+            <label class="field-label" for="x-username">X USERNAME</label>
+            <div class="input-wrap">
+              <span class="input-prefix">@</span>
+              <input id="x-username" type="text" inputmode="text" autocomplete="off"
+                     spellcheck="false" maxlength="15" placeholder="yourhandle">
+            </div>
+            <p class="field-error" id="username-error" role="alert"></p>
+          </div>
+          <button class="btn btn-primary" id="btn-step1">CONTINUE</button>
+        </div>
+
+        <!-- STEP 2: X missions -->
+        <div class="panel" id="panel-2">
+          <h2 class="panel-title">Flight missions</h2>
+          <p class="panel-sub">Complete all four on X. Each one verifies in a few seconds.</p>
+          <ul class="tasks" id="tasks">
+            <li class="task" data-task="follow">
+              <span class="task-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              </span>
+              <div class="task-info">
+                <span class="task-name">Follow @robinpepega</span>
+                <span class="task-hint">Join the flock</span>
+              </div>
+              <button class="btn btn-task" data-action="follow">FOLLOW</button>
+            </li>
+            <li class="task" data-task="like">
+              <span class="task-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+              </span>
+              <div class="task-info">
+                <span class="task-name">Like the pinned post</span>
+                <span class="task-hint">Show the frog some love</span>
+              </div>
+              <button class="btn btn-task" data-action="like">LIKE</button>
+            </li>
+            <li class="task" data-task="repost">
+              <span class="task-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              </span>
+              <div class="task-info">
+                <span class="task-name">Repost it</span>
+                <span class="task-hint">Spread the signal</span>
+              </div>
+              <button class="btn btn-task" data-action="repost">REPOST</button>
+            </li>
+            <li class="task" data-task="comment">
+              <span class="task-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
+              </span>
+              <div class="task-info">
+                <span class="task-name">Drop a comment</span>
+                <span class="task-hint">Croak in the replies</span>
+              </div>
+              <button class="btn btn-task" data-action="comment">COMMENT</button>
+            </li>
+          </ul>
+          <button class="btn btn-primary" id="btn-step2" disabled>ALL MISSIONS DONE — CONTINUE</button>
+        </div>
+
+        <!-- STEP 3: wallet -->
+        <div class="panel" id="panel-3">
+          <h2 class="panel-title">Where do we drop it?</h2>
+          <p class="panel-sub">Your EVM wallet address on Robinhood Chain.</p>
+          <div class="field">
+            <label class="field-label" for="wallet">WALLET ADDRESS</label>
+            <div class="input-wrap">
+              <input id="wallet" type="text" inputmode="text" autocomplete="off"
+                     spellcheck="false" placeholder="0x…">
+            </div>
+            <p class="field-error" id="wallet-error" role="alert"></p>
+          </div>
+          <button class="btn btn-primary" id="btn-step3">ISSUE MY PASS</button>
+        </div>
+
+        <!-- PASS -->
+        <div class="panel" id="panel-pass">
+          <h2 class="panel-title pass-heading">You're on the flight. <span>🐸</span></h2>
+          <p class="panel-sub" id="pass-sub">Boarding pass issued. Download it, share it, don't lose it.</p>
+          <div class="pass-stage">
+            <canvas id="pass-canvas" width="1600" height="640" aria-label="Robinpepe airdrop boarding pass"></canvas>
+          </div>
+          <div class="pass-actions">
+            <button class="btn btn-primary" id="btn-download">⬇&nbsp; DOWNLOAD PASS</button>
+            <button class="btn btn-ghost" id="btn-share">𝕏&nbsp; SHARE ON X</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="datastrip" aria-label="Token facts">
+      <div class="datastrip-inner">
+        <div class="datum"><span class="datum-label">CHAIN</span><span class="datum-value">ROBINHOOD</span></div>
+        <div class="datum"><span class="datum-label">TICKER</span><span class="datum-value">$RPEPE</span></div>
+        <div class="datum"><span class="datum-label">AIRDROP</span><span class="datum-value is-soon">SOON</span></div>
+        <div class="datum"><span class="datum-label">CONTRACT</span><span class="datum-value">TBA</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="foot-brand">ROBINPEPE&nbsp;·&nbsp;$RPEPE</p>
+    <p class="foot-note">Robinpepe is a community memecoin on Robinhood Chain. Not affiliated with or endorsed by Robinhood Markets.
+    Nothing here is financial advice. Contract: TBA.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
