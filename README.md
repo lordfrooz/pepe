@@ -23,6 +23,7 @@ Yerelde `.env` dosyasına yazılır (repo'da örnek: `.env.example`), Railway'de
 | `ADMIN_KEY` | Export için | `/api/export?key=<ADMIN_KEY>` CSV indirme anahtarı |
 | `PINNED_TWEET_ID` | Görevler için | Kampanya tweet ID'si (`x.com/robinpepega/status/<ID>`); boşsa like/repost/comment profili açar |
 | `X_HANDLE` | Hayır | X kullanıcı adı, varsayılan `robinpepega` |
+| `SITE_URL` | Hayır | OG/Twitter önizlemelerindeki mutlak adres; boşsa istekten otomatik algılanır |
 | `PORT` | Hayır | Railway otomatik verir; yerelde varsayılan 3000 |
 
 Frontend bu ayarları `/api/config` endpoint'inden çeker; değişiklik için kod düzenlemek gerekmez.

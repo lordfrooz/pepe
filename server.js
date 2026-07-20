@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const crypto = require('crypto');
 const { Pool } = require('pg');
 
@@ -12,8 +13,25 @@ const ADMIN_KEY = process.env.ADMIN_KEY || '';
 const X_HANDLE = process.env.X_HANDLE || 'robinpepega';
 const PINNED_TWEET_ID = process.env.PINNED_TWEET_ID || '';
 
+app.set('trust proxy', true); // Railway proxy'si arkasinda dogru protokol/host icin
+
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+
+// index.html'i, OG/Twitter onizleme etiketlerindeki __ORIGIN__ yer tutucusunu
+// gercek site adresiyle doldurarak servis et. Adres SITE_URL env degiskeninden,
+// o yoksa istegin kendisinden (Railway domain'i, custom domain...) alinir.
+const PUB = path.join(__dirname, 'public');
+function renderIndex(req, res) {
+  const origin = (process.env.SITE_URL || `${req.protocol}://${req.get('host')}`)
+    .replace(/\/+$/, '');
+  const html = fs
+    .readFileSync(path.join(PUB, 'index.html'), 'utf8')
+    .replaceAll('__ORIGIN__', origin);
+  res.type('html').send(html);
+}
+app.get('/', renderIndex);
+app.get('/index.html', renderIndex);
+app.use(express.static(PUB, { index: false }));
 
 // ---------------------------------------------------------------------------
 // Storage: Postgres on Railway (DATABASE_URL). Falls back to an in-memory map
